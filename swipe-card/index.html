@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+        <script type="text/javascript" src="http://cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
+        <script type="text/javascript" src="./src/swipe-card.js"></script>
+        <style type="text/css">
+          * {
+            padding: 0;
+            border: none;
+            margin: 0;
+            outline: 0;
+            box-sizing: border-box;
+          }
+          html {
+            font-size: 16px;
+            height: 100%;
+          }
+          body {
+            height: 100%;
+          }
+          .card-container {
+            background-color: #efefef;
+            position: relative;
+            width: 100%;
+            height: 80%;
+            list-style: none;
+          }
+          .card-container li {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border-radius: 0.5rem;
+            font-size: 5rem;
+            color: #fff;
+            text-align: center;
+          }
+          .a {
+            background-color: #1abc9c;
+          }
+          .b {
+            background-color: #e74c3c;
+          }
+          .c {
+            background-color: #3498db;
+          }
+          .d {
+            background-color: #9b59b6;
+          }
+          .e {
+            background-color: #34495e;
+          }
+          .f {
+            background-color: #f1c40f;
+          }
+          .g {
+            background-color: #e67e22;
+          }
+        </style>
+    </head>
+    <body>
+        <ul class="card-container">
+          <li class="a">1</li>
+          <li class="b">2</li>
+          <li class="c">3</li>
+          <li class="d">4</li>
+          <li class="e">5</li>
+          <li class="f">6</li>
+          <li class="g">7</li>
+        </ul>
+  
+      <script type="text/javascript">
+        $(function(){
+          $('.card-container').swipeCard();
+        });
+      </script>
+    </body>
+</html>
