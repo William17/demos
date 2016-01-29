@@ -28,7 +28,7 @@
     // 最大旋转角度
     this.maxAngle = options.maxAngle || 35;
     // 触发调整顺序时的角度
-    this.triggerAngle = options.triggerAngle || 25;
+    this.triggerAngle = options.triggerAngle || 15;
     // 过渡效果设置
     this.transitionDuration = parseFloat(options.transitionDuration || '0.5');
     this.transitionTimingFunction = options.transitionTimingFunction || 'ease';
@@ -37,7 +37,7 @@
     this.maxWidth = this.$items.width();
     this.elLength = this.$items.length;
     // 是否使用透明
-    this.useOpacity = options.useOpacity === undefined? false : options.useOpacity;
+    this.useOpacity = options.useOpacity === undefined? true : options.useOpacity;
 
     this.init();
     this.bindEvents();
@@ -126,12 +126,15 @@
         transform  = 'rotateZ(' + angle * factor  + 'deg)';
         css = {
           '-webkit-transform-origin': transformOrigin,
+          '-moz-transform-origin': transformOrigin,
           '-ms-transform-origin': transformOrigin,
           'transform-origin': transformOrigin,
           '-webkit-transform': transform,
+          '-moz-transform': transform,
           '-ms-transform': transform,
           'transform': transform,
           '-webkit-transition': 'none',
+          '-moz-transition': 'none',
           '-ms-transition': 'none',
           'transition': 'none',
           'opacity': useOpacity? (1-factor/2) : $item.data('origin-opacity')
@@ -148,10 +151,12 @@
         $item = $(this);
         $item.css({
           '-webkit-transform': 'rotateZ(0deg)',
+          '-moz-transform': 'rotateZ(0deg)',
           '-ms-transform': 'rotateZ(0deg)',
           'transform': 'rotateZ(0deg)',
           'opacity': $item.data('origin-opacity'),
           '-webkit-transition': transition,
+          '-moz-transition': transition,
           '-ms-transition': transition,
           'transition': transition
         });
@@ -179,6 +184,7 @@
         $topEl.parent().prepend($topEl);
         $topEl.css({
           '-webkit-transition': 'none',
+          '-moz-transition': 'none',
           '-ms-transition': 'none',
           'transition': 'none',
           'left': originLeft,
