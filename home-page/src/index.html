@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+      <header>
+        <form class="search" method="get" action="https://www.google.com/search">
+          <input type="text" id="gg-search-query" name="q" />
+          <input type="hidden" id="bd-search-query" name="wd" />
+          <input type="submit" id="gg-search" class="gg-search"
+  value="G">
+          <input type="submit" id="bd-search" class="bd-search" formaction="https://www.baidu.com/s?wd="
+  value="B">
+        </form>
+      </header>
+      <div id="sites" class="sites"></div>
+      <script type="text/javascript">
+          (function(doc){
+            var s = doc.createElement('script');
+            s.src = 'js/main.js?' + (+ new Date());
+            doc.head.appendChild(s);
+          })(document)
+        </script>
+    </body>
+</html>

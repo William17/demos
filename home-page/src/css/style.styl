@@ -1,0 +1,102 @@
+$design-width = 1280
+$design-height = 2560
+
+$base-width = 1280
+$base-height = $design-height * $base-width/$design-width
+$font-size-num = 12
+
+$toRem(val)
+  1rem * val/$font-size-num
+$height(val)
+  $toRem(val * $base-height / $design-height)
+$width(val)
+  $toRem(val * $base-width / $design-width)
+$size(val)
+  $toRem(val)
+
+/* base */ 
+* {
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: 0;
+  box-sizing border-box;
+}
+html {
+  font-size 1px * $font-size-num;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* content */ 
+body {
+  font-size: $size(14);
+  line-height: 1.5;
+}
+
+.search {
+  width: $width($base-width);
+  margin: $height(20) auto;
+  input[type="text"] {
+    width: $width($base-width - 250);
+    height: $height(40);
+    border: 1px solid #ccc;
+  }
+  input[type="submit"]{
+    height: $height(40);
+    width: $width(120);
+    font-size: $size(24);
+    color: #fff;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .bd-search {
+    background: #38f;
+  }
+  .gg-search {
+    background: #dd4b39;
+  }
+}
+
+.sites {
+  width: $width($base-width);
+  margin: 0 auto;
+  font-size: $size(20);
+  cols = 5;
+  offset = 20;
+  width = ($base-width - ((cols - 1) * offset))/cols;
+  ul {
+    list-style: none;
+    margin-left: $width(-1 * offset);
+    margin-bottom: $height(30)
+  }
+  li {
+    display: inline-block;
+    width: $width(width);
+    margin-left: $width(offset);
+  }
+  a {
+    display: block;
+    padding: $height(10);
+    background: #efefef;
+    color: #000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+      background: #F45551;
+      color: #fff;
+    }
+  }
+}
