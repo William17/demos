@@ -22,8 +22,9 @@
       <div id="sites" class="sites"></div>
       <script type="text/javascript">
           (function(doc){
+            var t = location.href.indexOf('nocache')>-1 ? (+new Date()) : '';
             var s = doc.createElement('script');
-            s.src = 'js/main.js?' + (+ new Date());
+            s.src = 'js/main.js?t=' + t;
             doc.head.appendChild(s);
           })(document)
         </script>
