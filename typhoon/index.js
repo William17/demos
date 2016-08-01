@@ -27,7 +27,6 @@ $(function() {
               });
           }
       });
-      var initCenter = false;
       yunba.set_message_cb(function (data) {
           if (data.topic == 'nida_position') {
             var position = JSON.parse(data.msg);
@@ -38,12 +37,9 @@ $(function() {
                   icon:'./static/typhoon.gif'
               });
               marker.setMap(map);
-              if (!initCenter) {
-                map.panTo(point);
-                initCenter = true;
-              }
             } else {
               marker.setPosition(point);
+              map.panTo(point);
             }
             console.log('moveTo: ' + position.lat + ',' + position.lng);
           }
