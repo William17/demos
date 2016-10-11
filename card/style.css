@@ -1,0 +1,85 @@
+        body {
+            padding: 0;
+            margin: 0;
+            color: #000;
+            background: #f2f2f6;
+            font-family: Microsoft YaHei,微软雅黑,SimSun,Microsoft JhengHei,华文细黑,STHeiti,MingLiu,tahoma,verdana,arial,sans-serif!important;
+        }
+        a {
+            color: #000;
+        }
+        .weui-cell {
+            font-size: 15px;
+            word-break: break-all;
+            white-space: normal;
+        }
+        .weui-label {
+            color: #888;
+        }
+        .app {
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .app-head {
+            padding-top: 50px;
+            color: #fff;
+            font-size: 14px;
+        }
+        .app-head .face {
+            width: 88px;
+            height: 88px;
+            margin-right: 15px;
+        }
+        .app-head .face img {
+            border-radius: 50%;
+        }
+        .app-btn-right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -12px;
+            margin-right: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+        }
+        .app-bottom {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            background: rgb(255,255,255);
+            background: rgba(255,255,255, 0.8);
+            height: 50px;
+            bottom: 0;
+        }
+        .app-bottom-btn-wrap {
+            height: 50px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 9px;
+        }
+        .app-bottom-btn-wrap .weui-btn {
+            line-height: 32px;
+            height: 32px;
+            font-size: 16px;
+        }
+        .qrcode-dialog img{
+            margin: auto;
+            display: block;
+        }
+        .qrcode-dialog .qr-img {
+            background: #fff;
+            margin: 0 auto;
+            width: 210px;
+            height: 210px;
+            padding-top: 5px;
+        }
+        .qrcode-dialog p {
+            color: #fff;
+            margin-top: 20px;
+        }
+        .qrcode-dialog .weui-icon-cancel {
+            color: #fff;
+            font-size: 30px;
+            margin-top: 15px;
+        }
