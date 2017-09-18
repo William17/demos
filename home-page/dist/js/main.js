@@ -1,6 +1,6 @@
 var SITES = [
     {
-      'Reader': 'https://digg.com/reader'
+      'Today': 'https://feedly.com/i/my'
     },
     {
       'Hacker-News': 'https://news.ycombinator.com/',
